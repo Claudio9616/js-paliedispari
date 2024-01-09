@@ -63,5 +63,33 @@ button.addEventListener('click', function(){
         win = true
     }
     // 8
-    victory.innerText = message
+    victory.innerText = `${message} ${resultNumber}`
 })
+//  PAROLA PALINDROMA
+// 1 - faccio la domanda all'utente tramite un prompt dichiarandola in una variabile.
+// 2 - inserisco come argomento, la variabile legata alla risposta dell'utente associandola ad una nuova variabile "resultWord".
+// 3 - Costruisco la funzione.
+// 4 - trasformo le lettere in minuscole
+// 5 - Creo la condizionale per verificare che la parola inserita dall'utente sia palindroma o meno.
+
+// - 1
+let userWord = prompt("Inserisci una parola:");
+
+// - 2
+const resultWord = isPalindrome(userWord);
+
+console.log(resultWord);
+
+// - 3
+function isPalindrome(userWord) {
+
+    // - 4
+    userWord = userWord.toLowerCase();
+
+    // - 5
+    if (userWord === userWord.split('').reverse().join('')) {
+        return "La parola è palindroma!";
+    } else {
+        return "La parola non è palindroma.";
+    }
+}
