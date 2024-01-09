@@ -7,7 +7,7 @@ function getResultCpu() {
     return resultCpu
 }
 function getUserNumber() {
-    const userNumber = number.value
+    const userNumber = parseInt(number.value)
     return userNumber
 }
 function isEven(num1, num2){
@@ -27,7 +27,7 @@ button.addEventListener('click', function(){
     console.log(resultCpu, ' resultCpu')    
     const userNumber = getUserNumber()
     console.log(userNumber, ' userNumber')
-    const resultNumber = isEven()
+    const resultNumber = isEven(resultCpu, userNumber)
     console.log(resultNumber, 'byhbhbh')
     const paDi = pR.value
     console.log(paDi, ' PaDi')
